@@ -7,7 +7,7 @@ export
       title: "Alli Ibrahim A.",
       subtitle: "Frontend Developer",
       content:
-        "I build clean, responsive, and modern web applications using Angular, React, Next.js, and Tailwind CSS.",
+        "I build clean, responsive, and modern web applications using Angular, React, Next.js, Tailwind CSS and Wordpress.",
     },
     about: {
       title: "About Me",

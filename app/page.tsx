@@ -15,6 +15,7 @@ import radixProjectImage from "./public/images/radix-proj.gif";
 import tepCentreProjectImage from "./public/images/tepcentre-proj.png";
 import studiosmainlandProjectImage from "./public/images/studiosmainland-proj.png";
 import moonshotProjectImage from "./public/images/moonshot-proj.png";
+import overalllogisticsbvProjectImage from "./public/images/overalllogisticsbv-proj.png";
 import Link from "next/link";
 
 const App: NextPage = () => {
@@ -227,6 +228,12 @@ const App: NextPage = () => {
                           currentPortfolioProject?.link === "moonshot" &&
                           <Image width={1918} height={862} alt=""
                             src={moonshotProjectImage}
+                          />
+                        }
+                        {
+                          currentPortfolioProject?.link === "overalllogisticsbv" &&
+                          <Image width={1918} height={862} alt=""
+                            src={overalllogisticsbvProjectImage}
                           />
                         }
                       </div>

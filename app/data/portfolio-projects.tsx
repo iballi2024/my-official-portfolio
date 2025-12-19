@@ -75,7 +75,7 @@ export const portfolioProjects: PortfolioProject[] = [
                 type: "youtube",
                 link: "https://www.youtube.com/embed/abb5tFw-CwQ?si=pU1Pbb5QlCnNT4mu"
             },
-            url: ""
+            url: "https://github.com/iballi2017/simple-weather-app"
         }
     },
     {
@@ -115,6 +115,26 @@ export const portfolioProjects: PortfolioProject[] = [
                 link: ""
             },
             url: "https://www.moonshotconsultinggroup.com/"
+        }
+    },
+    {
+        name: "Overall Logistics B.V. – WordPress Website",
+        description: "A WordPress-built website showcasing Overall Logistics B.V.’s logistics and energy transport services with clean design and easy content management.",
+
+        link: "overalllogisticsbv",
+        details: {
+            title: "Overall Logistics B.V. – WordPress Website",
+            body: <>
+                <p className="mb-5 text-green-100 max-w-4xl mx-auto">
+                    Overall Logistics B.V. is a logistics and energy transport specialist focused on safe storage, efficient handling, and seamless movement of essential resources such as crude oil and cargo. This WordPress‑built website highlights their services, commitment to safety and compliance, and global logistics solutions with clear design and easy content management.
+                </p>
+            </>,
+            tools: ["wordpress", "css", "javascript", "jquery"],
+            media: {
+                type: "image",
+                link: ""
+            },
+            url: "https://www.overalllogisticsbv.com/"
         }
     },
     // {

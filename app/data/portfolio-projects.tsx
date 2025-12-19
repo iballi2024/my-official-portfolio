@@ -19,11 +19,29 @@ type PortfolioProject = {
 
 export const portfolioProjects: PortfolioProject[] = [
     {
-        name: "Radix",
+        name: "TEP Centre | WordPress Website",
+        description: "WordPress-powered website developed for TEP Centre, delivering a clean, responsive, and easy-to-manage web presence.",
+
+        link: "tepcenter",
+        details: {
+            title: "TEP Centre | WordPress Website",
+            body: <>
+                <p className="mb-5 text-green-100 max-w-4xl mx-auto">Developed a WordPress website for TEP Centre with responsive design, optimized performance, structured content management, and maintainable theming.te developed for TEP Centre, delivering a clean, responsive, and easy-to-manage web presence.</p>
+            </>,
+            tools: ["wordpress", "css", "javascript", "jquery"],
+            media: {
+                type: "image",
+                link: ""
+            },
+            url: "https://tepcentre.com/"
+        }
+    },
+    {
+        name: "Radix - Portal",
         description: "A cutting-edge Banking-as-a-Service (BaaS).",
         link: "radix",
         details: {
-            title: "Radix",
+            title: "Radix - Portal",
             body: <>
                 <p className="mb-5 text-green-100 max-w-4xl mx-auto">
                     Radix is a cutting-edge Banking-as-a-Service (BaaS) platform, ensuring a seamless, responsive, and secure user experience across web applications.
@@ -39,11 +57,11 @@ export const portfolioProjects: PortfolioProject[] = [
         }
     },
     {
-        name: "Weather App",
+        name: "Weather App - SPA",
         description: "Simple and responsive weather application",
         link: "weather-app",
         details: {
-            title: "weather-app",
+            title: "Weather App - SPA",
             body: <>
                 <p className="mb-5 text-green-100 max-w-4xl mx-auto">
                     A simple and responsive weather application that displays current weather conditions using real-time data. The app focuses on clarity, usability, and a clean user interface, allowing users to quickly view weather information for different locations.
@@ -61,30 +79,12 @@ export const portfolioProjects: PortfolioProject[] = [
         }
     },
     {
-        name: "TEP Centre | WordPress Website",
-        description: "WordPress-powered website developed for TEP Centre, delivering a clean, responsive, and easy-to-manage web presence.",
-
-        link: "tepcenter",
-        details: {
-            title: "TEP Centre",
-            body: <>
-                <p className="mb-5 text-green-100 max-w-4xl mx-auto">Developed a WordPress website for TEP Centre with responsive design, optimized performance, structured content management, and maintainable theming.te developed for TEP Centre, delivering a clean, responsive, and easy-to-manage web presence.</p>
-            </>,
-            tools: ["wordpress", "css", "javascript", "jquery"],
-            media: {
-                type: "image",
-                link: ""
-            },
-            url: "https://tepcentre.com/"
-        }
-    },
-    {
         name: "Studios Mainland | WordPress-Powered Website",
         description: "Studios Mainland – Professional Video Production, Photography & Event Coverage in Lagos",
 
         link: "studiosmainland",
         details: {
-            title: "Studiosmainland",
+            title: "Studios Mainland | WordPress-Powered Website",
             body: <>
                 <p className="mb-5 text-green-100 max-w-4xl mx-auto">Studios Mainland is my creative portfolio, showcasing visual media projects and a custom website built with WordPress for flexibility, performance, and easy content management.
                 </p>

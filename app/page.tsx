@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Image from "next/image";
 import { portfolioProjects } from "./data/portfolio-projects";
 import { FaChevronLeft } from "react-icons/fa6";
+import radixProjectImage from "./public/images/radix-proj.gif";
 
 const App: NextPage = () => {
   const [activeSection, setActiveSection] = useState<typeof sections[number]>("home");
@@ -172,29 +173,58 @@ const App: NextPage = () => {
                 <h1 className="text-2xl font-extrabold capitalize mb-4">{currentPortfolioProject?.details?.title}</h1>
                 {currentPortfolioProject?.details?.body}
 
+                {
+                  currentPortfolioProject?.details?.tools?.length > 0 &&
+                  <ul className="flex items-center justify-center gap-2 mb-4">
+                    {
+                      currentPortfolioProject?.details?.tools?.map((tool: string) => <li key={tool}
+                        className="bg-success-soft border border-success-subtle text-fg-success-strong text-xs font-medium px-1.5 py-0.5 rounded">
+                        {tool}
+                      </li>)
+                    }
+                  </ul>
+                }
+
+                {/* <span class="bg-success-soft border border-success-subtle text-fg-success-strong text-xs font-medium px-1.5 py-0.5 rounded">Success</span> */}
+
 
                 <div className="px-2 lg:px-40">
+                  {
+                    currentPortfolioProject?.details?.media?.type === "gif" ? <>
+                      <div className="mb-6">
+                        {
+                          currentPortfolioProject?.link === "radix" &&
+                          <Image width={1918} height={862} alt=""
+                            src={radixProjectImage}
+                          />
+                        }
+                      </div>
+
+                    </> : <></>
+                  }
 
                   {/* <div></div> */}
                   {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps5oSHctoe8?si=_p_GQZQ_ni329Wqx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen={true}></iframe> */}
-                  <div className="video-container">
-                    {
-                      currentPortfolioProject?.details?.media && <iframe
-                        width="1280"
-                        height="620"
-                        src={currentPortfolioProject?.details?.media}
-                        title={currentPortfolioProject?.details?.title}
-                        frameBorder={0}
-                        // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      // className="w-full lg:w-5xl lg:min-h-80 mx-auto"
-                      />
-                    }
-                    {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps5oSHctoe8?si=MQD0-m1Q0Sja9yz8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> */}
+
+                  {
+                    currentPortfolioProject?.details?.media?.type === "youtube" &&
+                    <div className="video-container"><iframe
+                      width="1280"
+                      height="620"
+                      src={currentPortfolioProject?.details?.media?.link}
+                      title={currentPortfolioProject?.details?.title}
+                      frameBorder={0}
+                      // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    // className="w-full lg:w-5xl lg:min-h-80 mx-auto"
+                    />
+                    </div>
+                  }
+                  {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps5oSHctoe8?si=MQD0-m1Q0Sja9yz8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> */}
 
 
-                  </div>
+
                 </div>
 
               </motion.section>

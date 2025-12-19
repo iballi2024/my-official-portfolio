@@ -9,9 +9,10 @@ type PortfolioProject = {
         body: JSX.Element;
         tools: string[],
         media: {
-            type: "gif" | "youtube";
+            type: "image" | "youtube" | "direct-link";
             link: string;
         };
+        url: string;
     };
 }
 
@@ -30,10 +31,11 @@ export const portfolioProjects: PortfolioProject[] = [
             </>,
             tools: ['next.js', 'mantine', 'chartjs', 'reduxjs', 'flowbite', 'tailwindcss', 'sass'],
             media: {
-                type: "gif",
+                type: "image",
                 // link: "./public/images/radix-proj.gif"
                 link: "radix-proj"
-            }
+            },
+            url: "https://staging.baas-portal.mysourcebank.com/"
         }
     },
     {
@@ -54,19 +56,67 @@ export const portfolioProjects: PortfolioProject[] = [
             media: {
                 type: "youtube",
                 link: "https://www.youtube.com/embed/abb5tFw-CwQ?si=pU1Pbb5QlCnNT4mu"
-            }
+            },
+            url: ""
         }
     },
-    // {
-    //     name: "Portfolio Website",
-    //     description: "My personal portfolio built with Next.js and Tailwind CSS.",
-    //     link: "portfolio",
-    //     details: {
-    //         title: "My Portfolio",
-    //         body: <></>,
-    //         media: ""
-    //     }
-    // },
+    {
+        name: "TEP Centre | WordPress Website",
+        description: "WordPress-powered website developed for TEP Centre, delivering a clean, responsive, and easy-to-manage web presence.",
+
+        link: "tepcenter",
+        details: {
+            title: "TEP Centre",
+            body: <>
+                <p className="mb-5 text-green-100 max-w-4xl mx-auto">Developed a WordPress website for TEP Centre with responsive design, optimized performance, structured content management, and maintainable theming.te developed for TEP Centre, delivering a clean, responsive, and easy-to-manage web presence.</p>
+            </>,
+            tools: ["wordpress", "css", "javascript", "jquery"],
+            media: {
+                type: "image",
+                link: ""
+            },
+            url: "https://tepcentre.com/"
+        }
+    },
+    {
+        name: "Studios Mainland | WordPress-Powered Website",
+        description: "Studios Mainland – Professional Video Production, Photography & Event Coverage in Lagos",
+
+        link: "studiosmainland",
+        details: {
+            title: "Studiosmainland",
+            body: <>
+                <p className="mb-5 text-green-100 max-w-4xl mx-auto">Studios Mainland is my creative portfolio, showcasing visual media projects and a custom website built with WordPress for flexibility, performance, and easy content management.
+                </p>
+            </>,
+            tools: ["wordpress", "css", "javascript", "jquery"],
+            media: {
+                type: "image",
+                link: ""
+            },
+            url: "https://www.studiosmainland.com/"
+        }
+    },
+    {
+        name: "Moonshot Consulting Group – Strategic Solutions & WordPress Website",
+        description: "Moonshot Consulting Group showcases consulting and innovation projects on a WordPress-built website, combining clean design with easy content management.",
+
+        link: "moonshot",
+        details: {
+            title: "Moonshot Consulting Group",
+            body: <>
+                <p className="mb-5 text-green-100 max-w-4xl mx-auto">
+                    Moonshot Consulting Group delivers innovative consulting and strategic solutions, presented through a WordPress-built website designed for clarity, flexibility, and easy content management. The site highlights key projects, services, and insights, providing a professional online presence that reflects expertise and innovation.
+                </p>
+            </>,
+            tools: ["wordpress", "css", "javascript", "jquery"],
+            media: {
+                type: "image",
+                link: ""
+            },
+            url: "https://www.moonshotconsultinggroup.com/"
+        }
+    },
     // {
     //     name: "E-commerce App",
     //     description: "A React + Redux online store with payment integration.",

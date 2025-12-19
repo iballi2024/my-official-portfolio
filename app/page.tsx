@@ -10,8 +10,12 @@ import { variants } from "./data/variants";
 import Home from "./pages/Home";
 import Image from "next/image";
 import { portfolioProjects } from "./data/portfolio-projects";
-import { FaChevronLeft } from "react-icons/fa6";
+import { FaAngleRight, FaChevronLeft } from "react-icons/fa6";
 import radixProjectImage from "./public/images/radix-proj.gif";
+import tepCentreProjectImage from "./public/images/tepcentre-proj.png";
+import studiosmainlandProjectImage from "./public/images/studiosmainland-proj.png";
+import moonshotProjectImage from "./public/images/moonshot-proj.png";
+import Link from "next/link";
 
 const App: NextPage = () => {
   const [activeSection, setActiveSection] = useState<typeof sections[number]>("home");
@@ -185,17 +189,44 @@ const App: NextPage = () => {
                   </ul>
                 }
 
+                {
+                  currentPortfolioProject?.details?.url &&
+                  <Link href={currentPortfolioProject?.details?.url}
+                    target="_blank" className="text-center flex items-center justify-center gap-2 mb-6">Visit <FaAngleRight /></Link>
+                }
+
+
                 {/* <span class="bg-success-soft border border-success-subtle text-fg-success-strong text-xs font-medium px-1.5 py-0.5 rounded">Success</span> */}
 
 
                 <div className="px-2 lg:px-40">
+                  
+
                   {
-                    currentPortfolioProject?.details?.media?.type === "gif" ? <>
+                    currentPortfolioProject?.details?.media?.type === "image" ? <>
                       <div className="mb-6">
                         {
                           currentPortfolioProject?.link === "radix" &&
                           <Image width={1918} height={862} alt=""
                             src={radixProjectImage}
+                          />
+                        }
+                        {
+                          currentPortfolioProject?.link === "tepcenter" &&
+                          <Image width={1918} height={862} alt=""
+                            src={tepCentreProjectImage}
+                          />
+                        }
+                        {
+                          currentPortfolioProject?.link === "studiosmainland" &&
+                          <Image width={1918} height={862} alt=""
+                            src={studiosmainlandProjectImage}
+                          />
+                        }
+                        {
+                          currentPortfolioProject?.link === "moonshot" &&
+                          <Image width={1918} height={862} alt=""
+                            src={moonshotProjectImage}
                           />
                         }
                       </div>

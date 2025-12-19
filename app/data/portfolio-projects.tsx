@@ -7,7 +7,11 @@ type PortfolioProject = {
     details: {
         title: string;
         body: JSX.Element;
-        media: string;
+        tools: string[],
+        media: {
+            type: "gif" | "youtube";
+            link: string;
+        };
     };
 }
 
@@ -24,7 +28,12 @@ export const portfolioProjects: PortfolioProject[] = [
                     Radix is a cutting-edge Banking-as-a-Service (BaaS) platform, ensuring a seamless, responsive, and secure user experience across web applications.
                 </p>
             </>,
-            media: "https://www.youtube.com/embed/mYMkp-S-wts?si=T7hF_XB6CUZ5FfRw"
+            tools: ['next.js', 'mantine', 'chartjs', 'reduxjs', 'flowbite', 'tailwindcss', 'sass'],
+            media: {
+                type: "gif",
+                // link: "./public/images/radix-proj.gif"
+                link: "radix-proj"
+            }
         }
     },
     {
@@ -41,7 +50,11 @@ export const portfolioProjects: PortfolioProject[] = [
                     Built as a frontend practice project to demonstrate API integration, state management, and responsive UI design.
                 </p>
             </>,
-            media: "https://www.youtube.com/embed/abb5tFw-CwQ?si=pU1Pbb5QlCnNT4mu"
+            tools: ['typescript', 'react', 'tailwindcss', 'sass'],
+            media: {
+                type: "youtube",
+                link: "https://www.youtube.com/embed/abb5tFw-CwQ?si=pU1Pbb5QlCnNT4mu"
+            }
         }
     },
     // {

@@ -26,7 +26,7 @@ export default function Home({ slideDirection, variants }: {
                     {/* <span className="animate-pulse">▋</span> */}
                     <span className="cursor">▋</span>
                 </h1>
-                <p className="text-xl mb-6 text-green-300">{sectionsContent.home.subtitle}!!!!@@@</p>
+                <p className="text-xl mb-6 text-green-300">{sectionsContent.home.subtitle}</p>
                 <p className="max-w-xl mx-auto text-green-100">{sectionsContent.home.content}</p>
             </motion.section>
         </>
